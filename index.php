@@ -4,7 +4,7 @@ $data = [
   {
     "nama" => "Feri",
     "kelas" => 8,
-    "gender" = "pria"
+    "gender" => "pria"
   }
   ];
   
