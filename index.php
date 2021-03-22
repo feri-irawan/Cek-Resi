@@ -1,7 +1,7 @@
 <?php
 
 $data = [
-    "nama" => "Feri",
+    "nama" => "Feri irawan",
     "kelas" => 8,
     "gender" => "pria"
   ];
