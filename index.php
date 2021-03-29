@@ -116,9 +116,9 @@ $file = json_decode($file, true);
   <h1>Riwayat</h1>
     <?php $i = 0; foreach ($history as $row): $i++ ?>
       <div class="card mb-3">
-        <div class="card-header"><?=$i." | ".$row["date"];?></div>
+        <div class="card-header"><?=$i?> || <?=$row["date"];?></div>
         <div class="card-body"><?=$row["desc"]?></div>
-        <div class="card-footer"><?=$row["location"]?></div>
+        <div class="card-footer">Di: <?=$row["location"]?></div>
       </div>
     <?php endforeach; ?>
   </table>
