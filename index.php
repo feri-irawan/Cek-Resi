@@ -96,7 +96,7 @@ $file = json_decode($file, true);
       <th colspan="2" class="text-center">Detail</th>
     </tr>
     <tr>
-      <td width="100px">Dari</td>
+      <td>Dari</td>
       <td><?= info("detail", "origin") ?></td>
     </tr>
     <tr>
