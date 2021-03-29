@@ -29,10 +29,10 @@ $file = json_decode($file, true);
      <div class="col m-3">
       <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
       <select name="courier" class="form-select mb-3">
+        <option value="null">Pilih Courier</option>
         <?php
         $listCourier = json_decode(file_get_contents("https://api.binderbyte.com/v1/list_courier?api_key=$api_key"), true);
-        ?>
-        <?php foreach ($listCourier as $rowCourier): ?>
+        foreach ($listCourier as $rowCourier): ?>
           <option value="<?=$rowCourier["code"]?>"><?=$rowCourier["description"]?></option>
         <?php endforeach; ?>
       </select>
