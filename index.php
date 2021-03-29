@@ -26,9 +26,13 @@ print_r($file);
 <body>
   
 <div class="container">
-  <form class="m-3" action="" method="get" accept-charset="utf-8">
-    <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
-    <button class="btn btn-primary" type="submit">Cek</button>
+  <form action="" method="get" accept-charset="utf-8">
+   <div class="row">
+     <div class="col-10">
+      <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
+      <button class="btn btn-primary" type="submit">Cek</button>
+     </div>
+   </div>
   </form>
 </div>
   
