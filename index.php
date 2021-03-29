@@ -5,4 +5,7 @@ $no_resi  = $_GET["resi"];
 $param  = "api_key=$api_key&courier=$courier&awb=$no_resi";
 
 $url_api = "https://api.binderbyte.com/v1/track?$param";
-$file = file_get_contents("")
+$file = file_get_contents($url_api);
+$file = json_decode($file, true);
+
+print_r($file);
