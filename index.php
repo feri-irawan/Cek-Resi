@@ -62,11 +62,11 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Resi</td>
-      <td><?=$summary["awb"]?></td>
+      <td><?= info("summary", "awb") ?></td>
     </tr>
     <tr>
       <td>Kurir</td>
-      <td><?=$summary["courier"]?></td>
+      <td><?= info("summary", "courier") ?></td>
     </tr>
     <tr>
       <td>Layanan</td>
@@ -74,19 +74,19 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Status</td>
-      <td><?=$summary["status"]?></td>
+      <td><?= info("summary", "status") ?></td>
     </tr>
     <tr>
       <td>Tanggal</td>
-      <td><?=$summary["date"]?></td>
+      <td><?= info("summary", "date") ?></td>
     </tr>
     <tr>
       <td>Deskripsi</td>
-      <td><?=$summary["desc"]?></td>
+      <td><?= info("summary", "desc") ?></td>
     </tr>
     <tr>
       <td>Harga</td>
-      <td><?=$summary["amount"]?></td>
+      <td><?= info("summary", "amount") ?></td>
     </tr>
     <tr>
       <td>Bobot</td>
