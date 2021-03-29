@@ -46,6 +46,17 @@ $file = json_decode($file, true);
   $summary = $file["data"]["summary"];
   $details = $file["data"]["detail"];
   $history = $file["data"]["history"];
+  
+  function info($where, $type) {
+    global $file;
+    
+    $where = $file["data"][$type][$where];
+    
+    if ($type == "summary" || $type == "detail") {
+       ($where == "") ? "Tidak diketahui" : $where;
+    }
+    
+  }
   ?>
   <table class="table table-bordered table-striped">
     <tr>
