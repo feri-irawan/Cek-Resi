@@ -28,6 +28,25 @@ $file = json_decode($file, true);
    <div class="row">
      <div class="col m-3">
       <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
+      <select name="courier" class="form-select mb-3">
+        <option value="jnt">J&T</option>
+        <option value="jne">JNE</option>
+        <option value="pos">Pos Indonesia</option>
+        <option value="sicepat">Si Cepat</option>
+        <option value="tiki">Tiki</option>
+        <option value="anteraja">Anter Aja</option>
+        <option value="wahana">Wahana</option>
+        <option value="ninja">Ninja</option>
+        <option value="lion">Lion</option>
+        <option value="lion">PCP Express</option>
+        <option value="jet">JET Express</option>
+        <option value="ide">ID Express</option>
+        <option value="spx">Shopee Express</option>
+        <option value="rex">REZ Express</option>
+        <option value="sap">SAP Express</option>
+        <option value="kgx">KGXpress</option>
+        <option value="first">First Logistics</option>
+      </select>
       <button class="btn btn-primary" type="submit">Cek</button>
      </div>
    </div>
