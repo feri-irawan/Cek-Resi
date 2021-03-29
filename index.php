@@ -52,7 +52,7 @@ $file = json_decode($file, true);
     $where = $file["data"][$type][$where];
   
     if ($type == "summary" || $type == "detail") {
-      return ($where == "") ? "Tidak diketahui" : $where;
+      return ($where == "") ? "-" : $where;
     }
   }
   ?>
