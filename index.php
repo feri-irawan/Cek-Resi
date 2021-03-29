@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <form action="https://api.binderbyte.com/v1/track" method="get" accept-charset="utf-8">
-    <ul>
-      <li><input type="text" name="api_key" placeholder="apikey" required/></li>
-      <li><input type="text" name="courier" placeholder="courier" required/></li>
-      <li><input type="text" name="awb" placeholder="resi" required/></li>
-      <li><button type="submit">Go</button></li>
-    </ul>
-  </form>
-</body>
-</html>
+<?php
+$api_key = "b0b6beed4cef4b155d14a9514fafd24e9797e3e075f81f488bc20fc53153a900";
+$courier = $_GET["courier"];
+$no_resi  = $_GET["resi"];
+$param  = "api_key=$api_key&courier=$courier&awb=$no_resi";
+
+$url_api = "https://api.binderbyte.com/v1/track?$param";
+$file = file_get_contents("")
