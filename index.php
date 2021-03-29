@@ -97,19 +97,19 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Dari</td>
-      <td><?=$details["origin"]?></td>
+      <td><?= info("detail", "origin") ?></td>
     </tr>
     <tr>
       <td>Tujuan</td>
-      <td><?=$details["destination"]?></td>
+      <td><?= info("detail", "destination") ?></td>
     </tr>
     <tr>
       <td>Pengirim</td>
-      <td><?=$summary["shipper"]?></td>
+      <td><?= info("detail", "shipper") ?></td>
     </tr>
     <tr>
       <td>Penerima</td>
-      <td><?=$summary["receiver"]?></td>
+      <td><?= info("detail", "receiver") ?></td>
     </tr>
   </table>
 <?php endif; ?>
