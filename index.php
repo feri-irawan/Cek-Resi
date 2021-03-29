@@ -42,7 +42,11 @@ $file = json_decode($file, true);
   </form>
   
 <?php if ($file["status"] == 200): ?>
-  <?php $summary = $file["data"]["summary"];?>
+  <?php
+  $summary = $file["data"]["summary"];
+  $details = $file["data"]["detail"];
+  $history = $file["data"]["history"];
+  ?>
   <table class="table table-bordered table-striped">
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
@@ -78,6 +82,27 @@ $file = json_decode($file, true);
     <tr>
       <td>Bobot</td>
       <td><?=$summary["weight"]?></td>
+    </tr>
+  </table>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th colspan="2" class="text-center">Detail</th>
+    </tr>
+    <tr>
+      <td>Dari</td>
+      <td><?=$details["origin"]?></td>
+    </tr>
+    <tr>
+      <td>Tujuan</td>
+      <td><?=$details["destination"]?></td>
+    </tr>
+    <tr>
+      <td>Pengirim</td>
+      <td><?=$summary["shipper"]?></td>
+    </tr>
+    <tr>
+      <td>Penerima</td>
+      <td><?=$summary["receiver"]?></td>
     </tr>
   </table>
 <?php endif; ?>
