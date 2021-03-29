@@ -8,7 +8,10 @@
 </head>
 <body>
   <form action="https://resi.id/api/auth/login" method="post" accept-charset="utf-8">
-    
+    <ul>
+      <li><input type="email" name="email" required/></li>
+      <li><input type="text" name="password" required/></li>
+    </ul>
   </form>
 </body>
 </html>
