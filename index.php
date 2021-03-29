@@ -47,7 +47,7 @@ $file = json_decode($file, true);
   $details = $file["data"]["detail"];
   $history = $file["data"]["history"];
   
-  function info($where, $type) {
+  function info($type, $where) {
     global $file;
     $where = $file["data"][$type][$where];
   
@@ -70,7 +70,7 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Layanan</td>
-      <td><?= info("service", "summary") ?></td>
+      <td><?= info("summary", "service") ?></td>
     </tr>
     <tr>
       <td>Status</td>
@@ -90,7 +90,7 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Bobot</td>
-      <td><?=$summary["weight"]?></td>
+      <td><?= info("summary", "weight") ?></td>
     </tr>
   </table>
   <table class="table table-bordered table-striped">
