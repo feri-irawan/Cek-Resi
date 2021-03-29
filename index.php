@@ -43,25 +43,44 @@ $file = json_decode($file, true);
 </div>
   
 <?php if ($file["status"] == 200): ?>
-  <div class="alert alert-success m-3">
-    <?php $summary = $file["data"]["summary"];?>
-    
-    No. Resi: <?=$summary["awb"]?>
-    <hr>
-    Kurir: <?=$summary["courier"]?>
-    <hr>
-    Service: <?=$summary["service"]?>
-    <hr>
-    Status: <?=$summary["status"]?>
-    <hr>
-    Tanggal: <?=$summary["date"]?>
-    <hr>
-    Deskripsi: <?=$summary["desc"]?>
-    <hr>
-    Harga: <?=$summary["amount"]?>
-    <hr>
-    Bobot: <?=$summary["weight"]?>Kg.
-  </div>
+  <?php $summary = $file["data"]["summary"];?>
+  <table>
+    <tr>
+      <th>Ringkasan</th>
+    </tr>
+    <tr>
+      <td>Resi</td>
+      <td><?=$summary["awb"]?></td>
+    </tr>
+    <tr>
+      <td>Kurir</td>
+      <td><?=$summary["courier"]?></td>
+    </tr>
+    <tr>
+      <td>Layanan</td>
+      <td><?=$summary["service"]?></td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td><?=$summary["status"]?></td>
+    </tr>
+    <tr>
+      <td>Tanggal</td>
+      <td><?=$summary["date"]?></td>
+    </tr>
+    <tr>
+      <td>Deskripsi</td>
+      <td><?=$summary["desc"]?></td>
+    </tr>
+    <tr>
+      <td>Harga</td>
+      <td><?=$summary["amount"]?></td>
+    </tr>
+    <tr>
+      <td>Bobot</td>
+      <td><?=$summary["weight"]?></td>
+    </tr>
+  </table>
 <?php endif; ?>
   
   <pre>
