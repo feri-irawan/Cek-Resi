@@ -45,7 +45,7 @@ $file = json_decode($file, true);
   
   <pre>
     <code>
-      <?php print_r($listCourier);?>
+      <?php print_r($file);?>
     </code>
   </pre>
 </body>
