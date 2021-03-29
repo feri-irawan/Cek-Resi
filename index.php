@@ -43,7 +43,25 @@ $file = json_decode($file, true);
 </div>
   
 <?php if ($file["status"] == 200): ?>
-  <!-- code... -->
+  <div class="alert-alert-success m-3">
+    <?php $summary = $file["data"]["summary"];?>
+    
+    No. Resi: <?=$summary["awb"]?>
+    <hr>
+    Kurir: <?=$summary["courier"]?>
+    <hr>
+    Service: <?=$summary["service"]?>
+    <hr>
+    Status: <?=$summary["status"]?>
+    <hr>
+    Tanggal: <?=$summary["date"]?>
+    <hr>
+    Deskripsi: <?=$summary["desc"]?>
+    <hr>
+    Harga: <?=$summary["amount"]?>
+    <hr>
+    Bobot: <?=$summary["weight"]?>Kg.
+  </div>
 <?php endif; ?>
   
   <pre>
