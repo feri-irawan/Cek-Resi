@@ -1,5 +1,5 @@
 <?php
-$url = 'http://server.com/path';
+$url = 'https://resi.id/api/auth/login';
 $data = array('email' => 'pixwebsite1998@gmail.com', 'password' => '@qazxcvbn123');
 
 // use key 'http' even if you send the request to https://...
