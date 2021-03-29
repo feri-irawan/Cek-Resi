@@ -7,10 +7,11 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="https://resi.id/api/auth/login" method="post" accept-charset="utf-8">
+  <form action="https://api.binderbyte.com/v1/track" method="get" accept-charset="utf-8">
     <ul>
-      <li><input type="email" name="email" required/></li>
-      <li><input type="text" name="password" required/></li>
+      <li><input type="text" name="api_key" placeholder="apikey" required/></li>
+      <li><input type="text" name="courier" placeholder="courier" required/></li>
+      <li><input type="text" name="awb" placeholder="resi" required/></li>
       <li><button type="submit">Go</button></li>
     </ul>
   </form>
