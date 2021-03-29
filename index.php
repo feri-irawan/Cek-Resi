@@ -11,6 +11,7 @@
     <ul>
       <li><input type="email" name="email" required/></li>
       <li><input type="text" name="password" required/></li>
+      <li><button type="submit">Go</button></li>
     </ul>
   </form>
 </body>
