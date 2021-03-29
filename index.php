@@ -8,8 +8,6 @@ $url_api = "https://api.binderbyte.com/v1/track?$params";
 $file = file_get_contents($url_api);
 $file = json_decode($file, true);
 
-print_r($file);
-
 ?>
 
 <!DOCTYPE html>
@@ -36,5 +34,11 @@ print_r($file);
   </form>
 </div>
   
+  
+  <pre>
+    <code>
+      <?php print_r($file);?>
+    </code>
+  </pre>
 </body>
 </html>
