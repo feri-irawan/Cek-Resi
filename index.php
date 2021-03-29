@@ -25,10 +25,12 @@ print_r($file);
 </head>
 <body>
   
+<div class="container">
   <form action="" method="get" accept-charset="utf-8">
     <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
     <button class="btn btn-primary" type="submit">Cek</button>
   </form>
+</div>
   
 </body>
 </html>
