@@ -50,8 +50,9 @@ $file = json_decode($file, true);
   function info($where, $type) {
     global $file;
     $where = $file["data"][$type][$where];
+  
     if ($type == "summary" || $type == "detail") {
-       ($where == "") ? "Tidak diketahui" : $where;
+      return ($where == "") ? "Tidak diketahui" : $where;
     }
   }
   ?>
