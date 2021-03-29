@@ -43,7 +43,7 @@ $file = json_decode($file, true);
 </div>
   
 <?php if ($file["status"] == 200): ?>
-  <div class="alert-alert-success m-3">
+  <div class="alert alert-success m-3">
     <?php $summary = $file["data"]["summary"];?>
     
     No. Resi: <?=$summary["awb"]?>
