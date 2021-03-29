@@ -112,8 +112,17 @@ $file = json_decode($file, true);
       <td><?= info("detail", "receiver") ?></td>
     </tr>
   </table>
-<?php endif; ?>
   
+  <h1>Riwayat</h1>
+    <?php $i = 0; foreach ($history as $row): $i++ ?>
+      <div class="card">
+        <div class="card-header"><?=$i." | ".$row["date"];?></div>
+        <div class="card-body"><?=$row["desc"]?></div>
+        <div class="card-footer"><?=$row["location"]?></div>
+      </div>
+    <?php endforeach; ?>
+  </table>
+<?php endif; ?>
   
   
 </div>
