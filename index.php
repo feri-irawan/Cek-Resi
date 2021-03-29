@@ -27,7 +27,7 @@ $file = json_decode($file, true);
   <form action="" method="get" accept-charset="utf-8">
    <div class="row">
      <div class="col m-3">
-      <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..." value="<?php (isset($_GET["resi"])) ? echo($_GET["resi"]); ?>"/>
+      <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..." value="<?php isset($_GET["resi"]) ? echo($_GET["resi"]); ?>"/>
       <select name="courier" class="form-select mb-3">
         <option value="null">Pilih Courier</option>
         <?php
