@@ -46,7 +46,7 @@ $file = json_decode($file, true);
   <?php $summary = $file["data"]["summary"];?>
   <table class="table table-bordered table-striped">
     <tr>
-      <th>Ringkasan</th>
+      <th colspan="2">Ringkasan</th>
     </tr>
     <tr>
       <td>Resi</td>
