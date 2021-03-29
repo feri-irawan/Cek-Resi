@@ -61,7 +61,7 @@ $file = json_decode($file, true);
     </tr>
     <tr>
       <td>Layanan</td>
-      <td><?=$check = ($summary["service"] == "") ? "Tidak diketahui" : $summary["service"]; ?></td>
+      <td><?= ($summary["service"] == "") ? "Tidak diketahui" : $summary["service"]; ?></td>
     </tr>
     <tr>
       <td>Status</td>
