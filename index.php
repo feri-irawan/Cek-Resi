@@ -44,7 +44,7 @@ $file = json_decode($file, true);
   
 <?php if ($file["status"] == 200): ?>
   <?php $summary = $file["data"]["summary"];?>
-  <table>
+  <table class="table table-bordered table-striped">
     <tr>
       <th>Ringkasan</th>
     </tr>
