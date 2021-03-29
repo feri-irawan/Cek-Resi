@@ -42,10 +42,13 @@ $file = json_decode($file, true);
   </form>
 </div>
   
+<?php if ($file["status"] == 200): ?>
+  <!-- code... -->
+<?php endif; ?>
   
   <pre>
     <code>
-      <?php print_r($file);?>
+      <?php var_dump($file);?>
     </code>
   </pre>
 </body>
