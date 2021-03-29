@@ -49,13 +49,10 @@ $file = json_decode($file, true);
   
   function info($where, $type) {
     global $file;
-    
     $where = $file["data"][$type][$where];
-    
     if ($type == "summary" || $type == "detail") {
        ($where == "") ? "Tidak diketahui" : $where;
     }
-    
   }
   ?>
   <table class="table table-bordered table-striped">
