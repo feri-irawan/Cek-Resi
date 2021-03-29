@@ -32,6 +32,9 @@ $file = json_decode($file, true);
         <?php
         $listCourier = json_decode(file_get_contents("https://api.binderbyte.com/v1/list_courier?api_key=$api_key"), true);
         ?>
+        <?php foreach ($listCourier as $rowCourier): ?>
+          <option value="<?=$row["code"]?>"><?=$row["description"]?></option>
+        <?php endforeach; ?>
       </select>
       <button class="btn btn-primary" type="submit">Cek</button>
      </div>
