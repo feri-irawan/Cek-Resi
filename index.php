@@ -1,6 +1,6 @@
 <?php
 $url = 'http://server.com/path';
-$data = array('key1' => 'value1', 'key2' => 'value2');
+$data = array('email' => 'pixwebsite1998@gmail.com', 'password' => '@qazxcvbn123');
 
 // use key 'http' even if you send the request to https://...
 $options = array(
