@@ -40,7 +40,6 @@ $file = json_decode($file, true);
      </div>
    </div>
   </form>
-</div>
   
 <?php if ($file["status"] == 200): ?>
   <?php $summary = $file["data"]["summary"];?>
@@ -83,6 +82,12 @@ $file = json_decode($file, true);
   </table>
 <?php endif; ?>
   
+  
+  
+</div>
+<!-- endContainer -->
+
+
   <pre>
     <code>
       <?php var_dump($file);?>
