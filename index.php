@@ -28,6 +28,7 @@ $file = json_decode($file, true);
   padding: .5px .5rem;
   color: var(--bs-primary);
   margin-right: 1rem;
+  margin-top: 1px;
 }
 </style>
 </head>
