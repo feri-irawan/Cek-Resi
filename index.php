@@ -117,7 +117,7 @@ $file = json_decode($file, true);
     <?php $i = 0; foreach ($history as $row): $i++ ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
-           <div class="rounded-circle"><?=$i?></div>
+           <div class="box-circle"><?=$i?></div>
            <?=$row["date"];?>
           </div>
         <div class="card-body"><?=$row["desc"]?></div>
