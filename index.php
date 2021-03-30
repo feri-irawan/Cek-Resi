@@ -116,7 +116,10 @@ $file = json_decode($file, true);
   <h1>Riwayat</h1>
     <?php $i = 0; foreach ($history as $row): $i++ ?>
       <div class="card mb-3">
-        <div class="card-header bg-primary text-white"><?=$i?> || <?=$row["date"];?></div>
+        <div class="card-header bg-primary text-white">
+           <div class="rounded-circle"><?=$i?></div>
+           <?=$row["date"];?>
+          </div>
         <div class="card-body"><?=$row["desc"]?></div>
         <div class="card-footer">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8zm5-9.585l-5.708 5.627-3.706-3.627 1.414-1.415 2.291 2.213 4.295-4.213 1.414 1.415z"/></svg>
