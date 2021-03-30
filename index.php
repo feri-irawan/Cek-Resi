@@ -25,8 +25,9 @@ $file = json_decode($file, true);
   display: inline-block;
   border-radius: 20px;
   background: #fff;
-  padding: 1px .5rem;
+  padding: .5px .5rem;
   color: var(--bs-primary);
+  margin-right: 1rem;
 }
 </style>
 </head>
