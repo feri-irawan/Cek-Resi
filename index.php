@@ -29,6 +29,10 @@ $file = json_decode($file, true);
   color: var(--bs-primary);
   margin-right: 1rem;
 }
+.card-header {
+  display: flex;
+  align-items: center;
+}
 </style>
 </head>
 <body>
