@@ -57,7 +57,6 @@ $file = json_decode($file, true);
   
 <?php if ($file["status"] == 200): ?>
   <?php
-  $history = $file["data"]["history"];
   
   function info($type, $where) {
     global $file;
@@ -66,6 +65,12 @@ $file = json_decode($file, true);
     if ($type == "summary" || $type == "detail") {
       return ($where == "") ? "-" : $where;
     }
+  }
+  
+  //History Function
+  $history = $file["data"]["history"];
+  function history($forWhat) {
+    global 
   }
   ?>
   <table class="table table-bordered table-striped">
