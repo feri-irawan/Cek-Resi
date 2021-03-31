@@ -28,6 +28,7 @@ $file = json_decode($file, true);
 }
 th {
   background: red;
+  color: #fff;
 }
 .card,
 .card-header,
