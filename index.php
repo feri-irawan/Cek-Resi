@@ -46,7 +46,7 @@ $file = json_decode($file, true);
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 20px;
-  padding: 1px .5rem;
+  padding: 1.5px .5rem;
   margin-right: 1rem;
 }
 </style>
