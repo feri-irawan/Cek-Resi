@@ -118,8 +118,6 @@ $file = json_decode($file, true);
       <td>Bobot</td>
       <td><?= info("summary", "weight") ?></td>
     </tr>
-  </table>
-  <table class="table table-striped">
     <tr>
       <th colspan="2" class="text-center">Detail</th>
     </tr>
