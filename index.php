@@ -82,7 +82,7 @@ $file = json_decode($file, true);
     }
   }
 ?>
-  <table class="table table-bordered table-striped">
+  <table class="table table-striped">
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
     </tr>
@@ -119,7 +119,7 @@ $file = json_decode($file, true);
       <td><?= info("summary", "weight") ?></td>
     </tr>
   </table>
-  <table class="table table-bordered table-striped">
+  <table class="table table-striped">
     <tr>
       <th colspan="2" class="text-center">Detail</th>
     </tr>
