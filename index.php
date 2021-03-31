@@ -127,12 +127,10 @@ $file = json_decode($file, true);
   
   <h1>Riwayat</h1>
     <?php
-    
     $history = $file["data"]["history"];
-    
     $i = 0;
     foreach ($history as $row):
-    $i++
+    $i++;
     ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
