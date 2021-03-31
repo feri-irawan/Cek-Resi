@@ -135,7 +135,7 @@ $file = json_decode($file, true);
   </table>
   
   <h1>Riwayat</h1>
-    <?php for ($i = 0; $i ?>
+    <?php for ($i = 0; $i < count($file["data"]["history"]); $i++; ): ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
           <div class="box-circle"><?=$i?></div>
