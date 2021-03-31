@@ -26,28 +26,9 @@ $file = json_decode($file, true);
   font-family: Nunito;
   font-size: 14px;
 }
-
-table {
-  border-collapse: normal;
+th {
+  background: red;
 }
-
-table tr:nth-child(odd) {
-  background: #00000020;
-}
-table th, table td {
-  border: 5px solid transparent;
-}
-table tr th {
-  background: #ff0000;
-  text-align: center;
-  border-radius: 5px;
-}
-table td {
-  padding: 2px 10px;
-  border-radius: 5px;
-}
-
-
 .card,
 .card-header,
 .card-footer {
@@ -104,7 +85,7 @@ table td {
     }
   }
 ?>
-  <table>
+  <table class="table table-striped">
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
     </tr>
