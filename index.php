@@ -26,7 +26,7 @@ $file = json_decode($file, true);
   border: 2px solid #fff;
   border-radius: 20px;
   padding: .5px .5rem;
-  color: var(--bs-primary);
+  color: #fff;
   margin-right: 1rem;
 }
 .card-header {
