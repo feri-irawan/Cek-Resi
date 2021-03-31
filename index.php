@@ -36,7 +36,9 @@ $file = json_decode($file, true);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #bef19d;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
 }
 </style>
 </head>
