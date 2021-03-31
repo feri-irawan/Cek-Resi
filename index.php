@@ -24,12 +24,12 @@ $file = json_decode($file, true);
 <style>
 * {
   font-family: Nunito;
+  font-size: 14px;
 }
 .card,
 .card-header,
 .card-footer {
   border: none;
-  font-size: 14px;
 }
 .card {
   box-shadow: 0px 18px 20px #00000020;
