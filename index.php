@@ -72,9 +72,8 @@ $file = json_decode($file, true);
   
   function history($forWhat) {
     global $file;
-    $history = $file["data"]["history"];
+    $forWhat = $file["data"]["history"][$forWhat];
     
-    $forWhat = $history[$forWhat];
     return ($forWhat == "") ? "-" : $forWhat;
   }
   ?>
