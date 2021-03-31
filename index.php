@@ -27,7 +27,8 @@ $file = json_decode($file, true);
   font-size: 14px;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
   border-color: #ff0000;
   box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
 }
