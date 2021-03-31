@@ -136,7 +136,7 @@ $file = json_decode($file, true);
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
           <div class="box-circle"><?=$i?></div>
-          <?= $row["date"] ?>
+          <?= date_format($row["date"], "d-m-Y H:i:s") ?>
         </div>
         <div class="card-body"><?= $row["desc"] ?></div>
         <div class="card-footer">
