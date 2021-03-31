@@ -30,13 +30,13 @@ $file = json_decode($file, true);
   border: 2px solid #fff;
   border-radius: 20px;
   padding: .5px .5rem;
-  color: #fff;
   margin-right: 1rem;
 }
 .card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #aed2ff;
 }
 </style>
 </head>
