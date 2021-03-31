@@ -147,7 +147,7 @@ $file = json_decode($file, true);
       foreach ($history as $row):
       $i++;
     ?>
-      <div class="card mb-5">
+      <div class="card m-3">
         <div class="card-header">
           <div class="box-circle"><?=$i?></div>
           <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
