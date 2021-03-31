@@ -83,7 +83,7 @@ th {
   </form>
 
 <section id="result">
-  <?php if ( isset($_GET["resi"]) ): ?>
+  <?php if ( isset($_GET["resi"]) && isset($_GET["courier"]) ): ?>
     <?php if ($file["status"] == 200) {
       function info($type, $where) {
         global $file;
