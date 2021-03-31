@@ -68,8 +68,8 @@ th {
   <form action="" method="get" accept-charset="utf-8">
    <div class="row">
      <div class="col m-3">
-      <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..."/>
-      <select name="courier" class="form-select mb-3">
+      <input class="form-control mb-3" type="text" name="resi" placeholder="Masukan No. Resi..." required/>
+      <select name="courier" class="form-select mb-3" required/>
         <option value="null">Pilih Courier</option>
         <?php
         $listCourier = json_decode(file_get_contents("https://api.binderbyte.com/v1/list_courier?api_key=$api_key"), true);
@@ -77,13 +77,13 @@ th {
           <option value="<?=$rowCourier["code"]?>"><?=$rowCourier["description"]?></option>
         <?php endforeach; ?>
       </select>
-      <button class="btn btn-danger" type="submit" name="submit">Cek</button>
+      <button class="btn btn-danger" type="submit">Cek</button>
      </div>
    </div>
   </form>
 
 <section id="result">
-  <?php if ( isset($_GET["resi"]) && isset($_GET["courier"]) ): ?>
+  <?php if ( isset($_GET["resi"]) != " && isset($_GET["courier"]) ): ?>
     <?php if ($file["status"] == 200) {
       function info($type, $where) {
         global $file;
