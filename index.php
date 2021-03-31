@@ -56,8 +56,8 @@ $file = json_decode($file, true);
    </div>
   </form>
   
-<?php if ($file["status"] == 200): ?>
-  <?php
+<?php
+  if ($file["status"] == 200):
   function info($type, $where) {
     global $file;
     $where = $file["data"][$type][$where];
@@ -66,7 +66,7 @@ $file = json_decode($file, true);
       return ($where == "") ? "-" : $where;
     }
   }
-  ?>
+?>
   <table class="table table-bordered table-striped">
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
@@ -128,10 +128,10 @@ $file = json_decode($file, true);
   
   <h1>Riwayat</h1>
     <?php
-    $history = $file["data"]["history"];
-    $i = 0;
-    foreach ($history as $row):
-    $i++;
+      $history = $file["data"]["history"];
+      $i = 0;
+      foreach ($history as $row):
+      $i++;
     ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
