@@ -189,9 +189,6 @@ th {
   <?php endif; ?>
   
 </section>
-  
-  
-  <?var_dump($file)?>
 </div>
 <!-- endContainer -->
 </body>
