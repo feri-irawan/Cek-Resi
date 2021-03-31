@@ -26,6 +26,12 @@ $file = json_decode($file, true);
   font-family: Nunito;
   font-size: 14px;
 }
+
+.form-control:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+}
+
 th {
   background: #ff0000 !important;
   color: #fff;
