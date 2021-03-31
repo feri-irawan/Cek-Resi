@@ -68,8 +68,6 @@ $file = json_decode($file, true);
   }
   
   //History Function
-  $history = $file["data"]["history"];
-  
   function history($forWhat) {
     global $file;
     $forWhat = $file["data"]["history"][$forWhat];
@@ -137,7 +135,7 @@ $file = json_decode($file, true);
   </table>
   
   <h1>Riwayat</h1>
-    <?php $i = 0; foreach ($history as $row): $i++ ?>
+    <?php for ($i = 0; $i ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
           <div class="box-circle"><?=$i?></div>
@@ -149,7 +147,7 @@ $file = json_decode($file, true);
           <?= history("location") ?>
         </div>
       </div>
-    <?php endforeach; ?>
+    <?php endfor; ?>
   </table>
 <?php endif; ?>
   
