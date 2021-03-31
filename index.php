@@ -27,6 +27,10 @@ $file = json_decode($file, true);
   font-size: 14px;
 }
 
+table {
+  border-collapse: normal;
+}
+
 table tr:nth-child(odd) {
   background: #00000020;
 }
