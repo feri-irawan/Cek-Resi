@@ -25,10 +25,9 @@ $file = json_decode($file, true);
 * {
   font-family: Nunito;
 }
-.card {
-  border: none;
-}
-.card-header {
+.card,
+.card-header,
+.card-footer {
   border: none;
 }
 .card-header {
