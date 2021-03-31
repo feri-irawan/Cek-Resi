@@ -86,8 +86,8 @@ th {
     }
   }
 ?>
-  <div class="table-responsive">
-    <table class="table table-striped m-3">
+  <div class="table-responsive m-3">
+    <table class="table table-striped">
       <tr>
         <th colspan="2" class="text-center">Ringkasan</th>
       </tr>
