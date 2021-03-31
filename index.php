@@ -82,7 +82,7 @@ $file = json_decode($file, true);
     }
   }
 ?>
-  <table class="table table-striped">
+  <table>
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
     </tr>
