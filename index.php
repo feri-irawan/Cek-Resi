@@ -81,99 +81,100 @@ th {
      </div>
    </div>
   </form>
-  
-<?php
-  if ($file["status"] == 200):
-  function info($type, $where) {
-    global $file;
-    $where = $file["data"][$type][$where];
-  
-    if ($type == "summary" || $type == "detail") {
-      return ($where == "") ? "-" : $where;
+
+<section id="result">
+  <?php if ($file["status"] == 200) {
+    function info($type, $where) {
+      global $file;
+      $where = $file["data"][$type][$where];
+      if ($type == "summary" || $type == "detail") {
+        return ($where == "") ? "-" : $where;
+      }
     }
-  }
-?>
-  <div class="table-responsive m-3">
-    <table class="table table-striped">
-      <tr>
-        <th colspan="2" class="text-center">Ringkasan</th>
-      </tr>
-      <tr>
-        <td>Resi</td>
-        <td><?= info("summary", "awb") ?></td>
-      </tr>
-      <tr>
-        <td>Kurir</td>
-        <td><?= info("summary", "courier") ?></td>
-      </tr>
-      <tr>
-        <td>Layanan</td>
-        <td><?= info("summary", "service") ?></td>
-      </tr>
-      <tr>
-        <td>Status</td>
-        <td><?= info("summary", "status") ?></td>
-      </tr>
-      <tr>
-        <td>Tanggal</td>
-        <td><?= info("summary", "date") ?></td>
-      </tr>
-      <tr>
-        <td>Deskripsi</td>
-        <td><?= info("summary", "desc") ?></td>
-      </tr>
-      <tr>
-        <td>Harga</td>
-        <td><?= info("summary", "amount") ?></td>
-      </tr>
-      <tr>
-        <td>Bobot</td>
-        <td><?= info("summary", "weight") ?></td>
-      </tr>
-      <tr>
-        <th colspan="2" class="text-center">Detail</th>
-      </tr>
-      <tr>
-        <td>Dari</td>
-        <td><?= info("detail", "origin") ?></td>
-      </tr>
-      <tr>
-        <td>Tujuan</td>
-        <td><?= info("detail", "destination") ?></td>
-      </tr>
-      <tr>
-        <td>Pengirim</td>
-        <td><?= info("detail", "shipper") ?></td>
-      </tr>
-      <tr>
-        <td>Penerima</td>
-        <td><?= info("detail", "receiver") ?></td>
-      </tr>
+  ?>
+    <div class="table-responsive m-3">
+      <table class="table table-striped">
+        <tr>
+          <th colspan="2" class="text-center">Ringkasan</th>
+        </tr>
+        <tr>
+          <td>Resi</td>
+          <td><?= info("summary", "awb") ?></td>
+        </tr>
+        <tr>
+          <td>Kurir</td>
+          <td><?= info("summary", "courier") ?></td>
+        </tr>
+        <tr>
+          <td>Layanan</td>
+          <td><?= info("summary", "service") ?></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td><?= info("summary", "status") ?></td>
+        </tr>
+        <tr>
+          <td>Tanggal</td>
+          <td><?= info("summary", "date") ?></td>
+        </tr>
+        <tr>
+          <td>Deskripsi</td>
+          <td><?= info("summary", "desc") ?></td>
+        </tr>
+        <tr>
+          <td>Harga</td>
+          <td><?= info("summary", "amount") ?></td>
+        </tr>
+        <tr>
+          <td>Bobot</td>
+          <td><?= info("summary", "weight") ?></td>
+        </tr>
+        <tr>
+          <th colspan="2" class="text-center">Detail</th>
+        </tr>
+        <tr>
+          <td>Dari</td>
+          <td><?= info("detail", "origin") ?></td>
+        </tr>
+        <tr>
+          <td>Tujuan</td>
+          <td><?= info("detail", "destination") ?></td>
+        </tr>
+        <tr>
+          <td>Pengirim</td>
+          <td><?= info("detail", "shipper") ?></td>
+        </tr>
+        <tr>
+          <td>Penerima</td>
+          <td><?= info("detail", "receiver") ?></td>
+        </tr>
+      </table>
+    </div>
+    
+    <h4 class="text-center">Riwayat</h4>
+      <?php
+        $history = $file["data"]["history"];
+        $i = 0;
+        foreach ($history as $row):
+        $i++;
+      ?>
+        <div class="card m-3 mb-4">
+          <div class="card-header">
+            <div class="box-circle"><?=$i?></div>
+            <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
+          </div>
+          <div class="card-body"><?= $row["desc"] ?></div>
+          <div class="card-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8zm5-9.585l-5.708 5.627-3.706-3.627 1.414-1.415 2.291 2.213 4.295-4.213 1.414 1.415z"/></svg>
+            <?= ($row["location"] == "") ? "-" : $row["location"] ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </table>
-  </div>
+  <?php } ?>
   
-  <h4 class="text-center">Riwayat</h4>
-    <?php
-      $history = $file["data"]["history"];
-      $i = 0;
-      foreach ($history as $row):
-      $i++;
-    ?>
-      <div class="card m-3 mb-4">
-        <div class="card-header">
-          <div class="box-circle"><?=$i?></div>
-          <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
-        </div>
-        <div class="card-body"><?= $row["desc"] ?></div>
-        <div class="card-footer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8zm5-9.585l-5.708 5.627-3.706-3.627 1.414-1.415 2.291 2.213 4.295-4.213 1.414 1.415z"/></svg>
-          <?= ($row["location"] == "") ? "-" : $row["location"] ?>
-        </div>
-      </div>
-    <?php endforeach; ?>
-  </table>
-<?php endif; ?>
-  
+  <?php var_dump($file)?>
+</section>
   
 </div>
 <!-- endContainer -->
