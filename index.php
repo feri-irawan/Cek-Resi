@@ -25,12 +25,8 @@ $file = json_decode($file, true);
 * {
   font-family: Nunito;
 }
-.box-circle {
-  display: inline-block;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  padding: .5px .5rem;
-  margin-right: 1rem;
+.card-header {
+  border: none;
 }
 .card-header {
   display: flex;
@@ -39,6 +35,13 @@ $file = json_decode($file, true);
   background: #ff0000;
   color: #fff;
   font-weight: bold;
+}
+.box-circle {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: .5px .5rem;
+  margin-right: 1rem;
 }
 </style>
 </head>
