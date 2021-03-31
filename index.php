@@ -70,7 +70,8 @@ $file = json_decode($file, true);
   //History Function
   $history = $file["data"]["history"];
   function history($forWhat) {
-    global 
+    global $history;
+    return ($forWhat == "") ? "-" : $forWhat;
   }
   ?>
   <table class="table table-bordered table-striped">
