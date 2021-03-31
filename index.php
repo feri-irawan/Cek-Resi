@@ -126,7 +126,14 @@ $file = json_decode($file, true);
   </table>
   
   <h1>Riwayat</h1>
-    <?php $i = 0; foreach ($history as $row): $i++ ?>
+    <?php
+    
+    $history = $file["data"]["history"];
+    
+    $i = 0;
+    foreach ($history as $row):
+    $i++
+    ?>
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
           <div class="box-circle"><?=$i?></div>
