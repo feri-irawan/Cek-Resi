@@ -69,6 +69,7 @@ $file = json_decode($file, true);
   
   //History Function
   $history = $file["data"]["history"];
+  
   function history($forWhat) {
     global $file;
     $history = $file["data"]["history"];
