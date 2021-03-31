@@ -29,6 +29,7 @@ $file = json_decode($file, true);
 .card-header,
 .card-footer {
   border: none;
+  font-size: 14px;
 }
 .card {
   box-shadow: 0px 18px 20px #00000020;
