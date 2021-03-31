@@ -83,8 +83,7 @@ th {
   </form>
 
 <section id="result">
-  <?php if ( isset($_GET["resi"]) && isset($_GET["courier"]) ): ?>
-    <?php if ($file["status"] == 200) {
+  <?php if ( isset($_GET["resi"]) && isset($_GET["courier"]) ): 
       function info($type, $where) {
         global $file;
         $where = $file["data"][$type][$where];
@@ -172,7 +171,6 @@ th {
           </div>
         <?php endforeach; ?>
       </table>
-    <?php } ?>
   
   <?php else: ?>
     <div class="alert alert-warning m-3">
