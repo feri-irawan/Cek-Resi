@@ -27,11 +27,11 @@ $file = json_decode($file, true);
   font-size: 14px;
 }
 
-table {
-  border-spacing: 10px;
-}
 table tr:nth-child(odd) {
   background: #00000020;
+}
+table th, table td {
+  border: 5px solid transparent;
 }
 table tr th {
   background: #ff0000;
