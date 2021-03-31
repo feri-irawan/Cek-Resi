@@ -27,7 +27,7 @@ $file = json_decode($file, true);
   font-size: 14px;
 }
 th {
-  background: red;
+  background: #ff0000 !important;
   color: #fff;
 }
 .card,
