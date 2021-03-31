@@ -32,6 +32,7 @@ $file = json_decode($file, true);
 .card-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 </style>
 </head>
