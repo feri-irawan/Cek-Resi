@@ -30,6 +30,9 @@ $file = json_decode($file, true);
 .card-footer {
   border: none;
 }
+.card {
+  box-shadow: 0px 18px 20px #00000020;
+}
 .card-header {
   display: flex;
   align-items: center;
