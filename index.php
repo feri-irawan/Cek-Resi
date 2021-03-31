@@ -130,7 +130,7 @@ $file = json_decode($file, true);
     </tr>
   </table>
   
-  <h1>Riwayat</h1>
+  <h4 class="text-center">Riwayat</h4>
     <?php
       $history = $file["data"]["history"];
       $i = 0;
@@ -138,7 +138,7 @@ $file = json_decode($file, true);
       $i++;
     ?>
       <div class="card mb-3">
-        <div class="card-header bg-primary text-white">
+        <div class="card-header">
           <div class="box-circle"><?=$i?></div>
           <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
         </div>
