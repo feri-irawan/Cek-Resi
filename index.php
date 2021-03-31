@@ -77,7 +77,7 @@ th {
           <option value="<?=$rowCourier["code"]?>"><?=$rowCourier["description"]?></option>
         <?php endforeach; ?>
       </select>
-      <button class="btn btn-danger" type="submit">Cek</button>
+      <button class="btn btn-danger" type="submit" name="submit">Cek</button>
      </div>
    </div>
   </form>
