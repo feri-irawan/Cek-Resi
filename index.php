@@ -139,7 +139,7 @@ $file = json_decode($file, true);
       <div class="card mb-3">
         <div class="card-header bg-primary text-white">
           <div class="box-circle"><?=$i?></div>
-          <?= $row["date"] ?>
+          <?= history("date") ?>
         </div>
         <div class="card-body"><?= history("desc") ?></div>
         <div class="card-footer">
