@@ -86,62 +86,64 @@ th {
     }
   }
 ?>
-  <table class="table table-striped m-3">
-    <tr>
-      <th colspan="2" class="text-center">Ringkasan</th>
-    </tr>
-    <tr>
-      <td>Resi</td>
-      <td><?= info("summary", "awb") ?></td>
-    </tr>
-    <tr>
-      <td>Kurir</td>
-      <td><?= info("summary", "courier") ?></td>
-    </tr>
-    <tr>
-      <td>Layanan</td>
-      <td><?= info("summary", "service") ?></td>
-    </tr>
-    <tr>
-      <td>Status</td>
-      <td><?= info("summary", "status") ?></td>
-    </tr>
-    <tr>
-      <td>Tanggal</td>
-      <td><?= info("summary", "date") ?></td>
-    </tr>
-    <tr>
-      <td>Deskripsi</td>
-      <td><?= info("summary", "desc") ?></td>
-    </tr>
-    <tr>
-      <td>Harga</td>
-      <td><?= info("summary", "amount") ?></td>
-    </tr>
-    <tr>
-      <td>Bobot</td>
-      <td><?= info("summary", "weight") ?></td>
-    </tr>
-    <tr>
-      <th colspan="2" class="text-center">Detail</th>
-    </tr>
-    <tr>
-      <td>Dari</td>
-      <td><?= info("detail", "origin") ?></td>
-    </tr>
-    <tr>
-      <td>Tujuan</td>
-      <td><?= info("detail", "destination") ?></td>
-    </tr>
-    <tr>
-      <td>Pengirim</td>
-      <td><?= info("detail", "shipper") ?></td>
-    </tr>
-    <tr>
-      <td>Penerima</td>
-      <td><?= info("detail", "receiver") ?></td>
-    </tr>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-striped m-3">
+      <tr>
+        <th colspan="2" class="text-center">Ringkasan</th>
+      </tr>
+      <tr>
+        <td>Resi</td>
+        <td><?= info("summary", "awb") ?></td>
+      </tr>
+      <tr>
+        <td>Kurir</td>
+        <td><?= info("summary", "courier") ?></td>
+      </tr>
+      <tr>
+        <td>Layanan</td>
+        <td><?= info("summary", "service") ?></td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td><?= info("summary", "status") ?></td>
+      </tr>
+      <tr>
+        <td>Tanggal</td>
+        <td><?= info("summary", "date") ?></td>
+      </tr>
+      <tr>
+        <td>Deskripsi</td>
+        <td><?= info("summary", "desc") ?></td>
+      </tr>
+      <tr>
+        <td>Harga</td>
+        <td><?= info("summary", "amount") ?></td>
+      </tr>
+      <tr>
+        <td>Bobot</td>
+        <td><?= info("summary", "weight") ?></td>
+      </tr>
+      <tr>
+        <th colspan="2" class="text-center">Detail</th>
+      </tr>
+      <tr>
+        <td>Dari</td>
+        <td><?= info("detail", "origin") ?></td>
+      </tr>
+      <tr>
+        <td>Tujuan</td>
+        <td><?= info("detail", "destination") ?></td>
+      </tr>
+      <tr>
+        <td>Pengirim</td>
+        <td><?= info("detail", "shipper") ?></td>
+      </tr>
+      <tr>
+        <td>Penerima</td>
+        <td><?= info("detail", "receiver") ?></td>
+      </tr>
+    </table>
+  </div>
   
   <h4 class="text-center">Riwayat</h4>
     <?php
