@@ -26,6 +26,22 @@ $file = json_decode($file, true);
   font-family: Nunito;
   font-size: 14px;
 }
+
+table {
+  border-spacing: 5px;
+}
+table tr:nth-child(odd) {
+  background: #00000020;
+}
+table tr th {
+  background: #ff0000;
+}
+table td {
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+
 .card,
 .card-header,
 .card-footer {
