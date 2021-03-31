@@ -83,7 +83,7 @@ th {
   </form>
 
 <section id="result">
-  <?php if ( $file != null && isset($_GET["resi"]) ): ?>
+  <?php if ( isset($_GET["resi"]) ): ?>
     <?php if ($file["status"] == 200) {
       function info($type, $where) {
         global $file;
@@ -173,6 +173,7 @@ th {
         <?php endforeach; ?>
       </table>
     <?php } ?>
+  
   <?php else: ?>
     <div class="alert alert-warning m-3">
       Oops, terjadi masalah.
