@@ -86,7 +86,7 @@ th {
     }
   }
 ?>
-  <table class="table table-striped">
+  <table class="table table-striped m-3">
     <tr>
       <th colspan="2" class="text-center">Ringkasan</th>
     </tr>
