@@ -174,7 +174,7 @@ th {
       <?php endforeach; ?>
     <?php endif; ?>
   
-  <?php elseif (isset($_GET["submit"]) && $file == null): ?>
+  <?php else: ?>
     <?php if ($file == null): ?>
       <div class="alert alert-warning m-3">
         Oops, terjadi masalah.
