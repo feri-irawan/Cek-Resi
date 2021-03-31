@@ -83,15 +83,17 @@ th {
   </form>
 
 <section id="result">
-  <?php if ( isset($_GET["resi"]) && isset($_GET["courier"]) ): 
-      function info($type, $where) {
-        global $file;
-        $where = $file["data"][$type][$where];
-        if ($type == "summary" || $type == "detail") {
-          return ($where == "") ? "-" : $where;
+  <?php if ( isset($_GET["submit"]) ): ?>
+    <?php if ($file["status"] == 200): ?>
+      <?php
+        function info($type, $where) {
+          global $file;
+          $where = $file["data"][$type][$where];
+          if ($type == "summary" || $type == "detail") {
+            return ($where == "") ? "-" : $where;
+          }
         }
-      }
-    ?>
+      ?>
       <div class="table-responsive m-3">
         <table class="table table-striped">
           <tr>
@@ -152,35 +154,38 @@ th {
       </div>
       
       <h4 class="text-center">Riwayat</h4>
-        <?php
-          $history = $file["data"]["history"];
-          $i = 0;
-          foreach ($history as $row):
-          $i++;
-        ?>
-          <div class="card m-3 mb-4">
-            <div class="card-header">
-              <div class="box-circle"><?=$i?></div>
-              <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
+      <?php
+        $history = $file["data"]["history"];
+        $i = 0;
+        foreach ($history as $row):
+        $i++;
+      ?>
+        <div class="card m-3 mb-4">
+              <div class="card-header">
+                <div class="box-circle"><?=$i?></div>
+                <?= date_format(date_create($row["date"]), "d-m-Y H:i:s") ?>
+              </div>
+              <div class="card-body"><?= $row["desc"] ?></div>
+              <div class="card-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8zm5-9.585l-5.708 5.627-3.706-3.627 1.414-1.415 2.291 2.213 4.295-4.213 1.414 1.415z"/></svg>
+                <?= ($row["location"] == "") ? "-" : $row["location"] ?>
+              </div>
             </div>
-            <div class="card-body"><?= $row["desc"] ?></div>
-            <div class="card-footer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-5.522 0-10 4.395-10 9.815 0 5.505 4.375 9.268 10 14.185 5.625-4.917 10-8.68 10-14.185 0-5.42-4.478-9.815-10-9.815zm0 18c-4.419 0-8-3.582-8-8s3.581-8 8-8 8 3.582 8 8-3.581 8-8 8zm5-9.585l-5.708 5.627-3.706-3.627 1.414-1.415 2.291 2.213 4.295-4.213 1.414 1.415z"/></svg>
-              <?= ($row["location"] == "") ? "-" : $row["location"] ?>
-            </div>
-          </div>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
   
-  <?php elseif (isset($_GET["submit"]) && $file == null): ?>
-    <div class="alert alert-warning m-3">
-      Oops, terjadi masalah.
-      <br>
-      Kemungkinan penyebapnya:
-      <ul>
-        <li>Resi tidak cocok/salah</li>
-        <li>Anda tidak memilih/mengimputkan nama Kurir</li>
-      </ul>
-    </div>
+  <?php elseif (isset($_GET["submit"])): ?>
+    <?php if ($file == null): ?>
+      <div class="alert alert-warning m-3">
+        Oops, terjadi masalah.
+        <br>
+        Kemungkinan penyebapnya:
+        <ul>
+          <li>Resi tidak cocok/salah</li>
+          <li>Anda tidak memilih/mengimputkan nama Kurir</li>
+        </ul>
+      </div>
+    <?php endif; ?>
   <?php endif; ?>
   
 </section>
