@@ -28,7 +28,7 @@ $file = json_decode($file, true);
 }
 
 table {
-  border-spacing: 5px;
+  border-spacing: 10px;
 }
 table tr:nth-child(odd) {
   background: #00000020;
@@ -36,6 +36,7 @@ table tr:nth-child(odd) {
 table tr th {
   background: #ff0000;
   text-align: center;
+  border-radius: 5px;
 }
 table td {
   padding: 2px 10px;
