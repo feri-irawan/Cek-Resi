@@ -35,6 +35,7 @@ table tr:nth-child(odd) {
 }
 table tr th {
   background: #ff0000;
+  text-align: center;
 }
 table td {
   padding: 2px 10px;
