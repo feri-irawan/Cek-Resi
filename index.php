@@ -170,7 +170,6 @@ th {
             </div>
           </div>
         <?php endforeach; ?>
-      </table>
   
   <?php else: ?>
     <div class="alert alert-warning m-3">
