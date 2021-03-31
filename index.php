@@ -154,12 +154,5 @@ $file = json_decode($file, true);
   
 </div>
 <!-- endContainer -->
-
-
-  <pre>
-    <code>
-      <?php var_dump($file);?>
-    </code>
-  </pre>
 </body>
 </html>
